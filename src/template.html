@@ -6,7 +6,127 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> hiii</h1>
-    <h2>hey</h2>
+    <div id="body-container">
+        <div id="heading">
+            <p>ToDo</p>
+        </div>
+        <div id="navbar">
+            <button id = "home-elem">
+                <p>Home</p>
+                <p class="item-count"></p>
+            </button>
+            <button id = "today-elem">
+                <p>Today</p>
+                <p class="item-count"></p>
+            </button>
+            <button id = "tomorrow-elem">
+                <p>Tomorrow</p>
+                <p class="item-count"></p>
+            </button>
+            <button id = "priority-elem">
+                <p>Priority</p>
+                <p class="item-count"></p>
+            </button>
+            <button id = "completed-elem">
+                <p>Completed</p>
+                <p class="item-count"></p>
+            </button>
+        </div>
+        <div id="project-list-section">
+            <div id = "head-section">
+                <p id="project-heading">PROJECTS</p>
+                <button id="create-proj-btn">Create</button>
+            </div>
+            <dialog id = "add-proj-dialog">
+                <form>
+                    <p id="add-proj-head">Create a New Project</p>
+                    <div>
+                        <input type="text" id = "add-proj-input" name = "add-proj-input" required/>
+                    </div>
+                    <div>
+                        <button id = "create-proj">Create</button>
+                        <button id = "cancel-proj">Cancel</button>
+                    </div>
+                </form>
+            </dialog>
+            <div id="proj-list"></div>
+        </div>
+        <div id="add-todo-section">
+            <p id = "active-tab-heading">Home</p>
+            <button id = "add-todo-btn">Add Todo</button>
+            <div id = "todo-list"></div>
+            <dialog id = "add-todo-dialog">
+                <form>
+                    <h2>Add ToDo</h2>
+                    <div>
+                        <label for="title1">Title</label>
+                        <input type="text" id="title1" class = "title" name="title" required>
+                    </div>
+                    <div>
+                        <label for="description1">Description</label>
+                        <textarea id = "description1" class = "description" name = "description" cols = "25" rows = "7"></textarea>
+                    </div>
+                    <div>
+                        <label for="deadline1">Deadline</label>
+                        <input id = "deadline1" class = "deadline" type="date" name = "date" required>
+                    </div>
+                    <div>
+                        <label for="priority-select1">Priority</label>
+                        <select id = "priority-select1" class = "priority-select" name = "priority" required>
+                            <option value = ""> Set the Priority </option>
+                            <option value = "1" >1</option>
+                            <option value = "2">2</option>
+                            <option value = "3">3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="project-select1">Project</label>
+                        <select id = "project-select1" class = "project-select" name = "project" required>
+                            <option value = "">Choose Project</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class = "submit" type = "submit">Submit</button>
+                        <button class = "cancel" type = "button">Cancel</button>
+                    </div>
+                </form>
+            </dialog>
+        </div>
+        <dialog id = "update-todo-dialog">
+            <form>
+                <h2>Edit ToDo</h2>
+                <div>
+                    <label for="title2">Title</label>
+                    <input type="text" id="title2" class = "title" name="title" required>
+                </div>
+                <div>
+                    <label for="description2">Description</label>
+                    <textarea id = "description2" class = "description" name = "description" cols = "25" rows = "7"></textarea>
+                </div>
+                <div>
+                    <label for="deadline2">Deadline</label>
+                    <input id = "deadline2" class = "deadline" type="date" name = "date" required>
+                </div>
+                <div>
+                    <label for="priority-select2">Priority</label>
+                    <select id = "priority-select2" class = "priority-select" name = "priority" required>
+                        <option value = "1" >1</option>
+                        <option value = "2">2</option>
+                        <option value = "3">3</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="project-select2">Project</label>
+                    <select id = "project-select2" class = "project-select" name = "project" required>
+                    </select>
+                </div>
+                <div>
+                    <button class = "submit" type = "submit">Update</button>
+                    <button class = "cancel" type = "button">Cancel</button>
+                </div>
+            </form>
+        </dialog>
+
+    </div>
 </body>
 </html>
